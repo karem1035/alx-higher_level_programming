@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 def pow(a, b):
     n = 1
     if b >= 0:
