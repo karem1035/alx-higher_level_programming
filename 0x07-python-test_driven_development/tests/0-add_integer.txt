@@ -1,0 +1,8 @@
+==============================
+ Hot to use 0-add_integer.py
+==============================
+>>> from 0-add_integer improt add_integer
+>>> add_integer(2, 3)
+6
+>>> add_integer(2, 3.0)
+6.0
