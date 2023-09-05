@@ -3,16 +3,15 @@
 
 
 class Rectangle:
+    """A rectangle classs"""
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
 
-    """Return the height"""
     @property
     def height(self):
         return self.__height
     
-    """sett the height"""
     @height.setter
     def height(self, value):
         if type(value) != int:
@@ -22,12 +21,10 @@ class Rectangle:
         else:
             self.__height = value
 
-    """Return the width"""
     @property
     def width(self):
         return self.__width
     
-    """width setter"""
     @width.setter
     def width(self, value):
         if type(value) != int:
