@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 class Square:
     """
         A Square calss
@@ -6,4 +8,4 @@ class Square:
         """
             defining self and size
         """
-        self.size = size
+        self.__size = size
