@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def lookup(obj):
     """A function that taks a Calss and returns its components
 
