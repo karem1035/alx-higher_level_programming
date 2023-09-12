@@ -38,3 +38,16 @@ case 3: empty list
 >>> print(my_list)
 []
 >>>
+
+-----------------------------------------
+
+case 4: negative numbers
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(-5)
+>>> my_list.append(-6)
+>>> print(my_list)
+[-1, -5, -6]
+>>> my_list.print_sorted()
+[-6, -5, -1]
+>>>
