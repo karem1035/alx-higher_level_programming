@@ -43,3 +43,14 @@ case 3: empty list
 >>> new_list.print_sorted()
 []
 >>>
+
+case 4: one number
+================
+
+>>> new_list = MyList()
+>>> new_list.append(-2)
+>>> print(new_list)
+[-2]
+>>> new_list.print_sorted()
+[-2]
+
