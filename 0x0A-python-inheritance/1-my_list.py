@@ -1,16 +1,9 @@
 #!/usr/bin/python3
-""" A class that taks a list and sort it """
+"""This module inherits from the list class"""
 
 
 class MyList(list):
-
-    """the init method"""
-
-    def __init__(self):
-        super().__init__()
-
-    """ sort the self list and print it """
-
+    """A class that inherits from list"""
     def print_sorted(self):
-        sorted_list = sorted(self)
-        print(sorted_list)
+        """prints a sorted list"""
+        print(sorted(self))
