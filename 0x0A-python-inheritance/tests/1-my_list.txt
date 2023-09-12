@@ -1,9 +1,7 @@
-Test for 1-my_list.py
--------------------------------------------
-
 case 0: import
 >>> MyList = __import__('1-my_list').MyList
 >>>
+
 -------------------------------------------
 
 case 1: int
@@ -31,3 +29,12 @@ NameError: name 'my_list2' is not defined
 >>>
 
 ----------------------------------------
+
+case 3: empty list
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+>>> print(my_list)
+[]
+>>>
