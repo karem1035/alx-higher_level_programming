@@ -1,0 +1,45 @@
+=================
+How to use MyList
+=================
+
+case 0: import
+==============
+
+
+>>> MyList = __import__('1-my_list').MyList
+>>>
+
+
+case 1: int
+===========
+>>> new_list = MyList()
+>>> new_list.append(0)
+>>> new_list.append(5)
+>>> new_list.append(2)
+>>> print(new_list)
+[0, 5, 2]
+>>> new_list.print_sorted()
+[0, 2, 5]
+
+
+case 2: negative ints
+=====================
+>>> new_list = MyList()
+>>> new_list.append(-2)
+>>> new_list.append(-5)
+>>> new_list.append(-10)
+>>> new_list = MyList()
+>>> print(new_list)
+[-2, -5, -10]
+>>> new_list.print_sorted()
+[-10, -5, -2]
+>>>
+
+case 3: empty list
+==================
+>>> new_list = MyList()
+>>> print(new_list)
+[]
+>>> new_list.print_sorted()
+[]
+>>>
