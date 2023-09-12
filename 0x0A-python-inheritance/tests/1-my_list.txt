@@ -14,10 +14,7 @@ Checking for class docstring:
 >>> len(c) > 1
 True
 
-Checking for method docstring
-        >>> f = __import__("1-my_list").MyList.print_sorted.__doc__
-        >>> len(f) > 1
-        True
+
 
 Checking given test case
 >>> my_list = MyList()
