@@ -21,13 +21,13 @@ case 1: int
 case 2: non defined
 
 >>> my_list = MyList()
->>> my_list.append(0)
->>> my_list.append(5)
->>> my_list.append(2)
 >>> my_list.print_sorted()
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'my_list2' is not defined
 >>>
 
----------------------------------------------
+
+
+
+----------------------------------------------
