@@ -12,4 +12,6 @@ case 0: Import
 case 1: int check
 -----------------
 
->>> 
+>>> BaseG = BaseGeometry()
+>>> BaseG.integer_validator("karem", 0)
+karem must be integer
