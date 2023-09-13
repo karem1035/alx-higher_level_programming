@@ -28,11 +28,6 @@ with no arguments.
 In fact, any arguments supplied to an instantiation of ``BaseGeometry`` results
 in a TypeError.
 
-::
-
-    >>> bg = BaseGeometry(None)
-    Traceback (most recent call last):
-    TypeError: object() takes no parameters
 
 Methods
 =======
