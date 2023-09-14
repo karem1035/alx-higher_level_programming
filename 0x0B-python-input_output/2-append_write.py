@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-"""Defines a file-appending function."""
+"""A function that appends to a txt file"""
 
 
 def append_write(filename="", text=""):
-    """Appends a string to the end of a UTF8 text file.
+    """appending to text file
 
     Args:
-        filename (str): The name of the file to append to.
-        text (str): The string to append to the file.
-    Returns:
-        The number of characters appended.
+        filename: the file name
+        text: the text to be appended
+
+    Return:
+        the number of text to be added.
     """
-    with open(filename, "a", encoding="utf-8") as f:
-        return f.write(text)
+    with open(filename, "a", encoding="UTF") as a_file:
+        return a_file.write(text)
