@@ -13,7 +13,6 @@ if __name__ == "__main__":
 
     if len(sys.argv) > 1:
         args_list = list(sys.argv[1:])
-        print(args_list)
 
     with open("add_item.json", "r", encoding="UTF8") as a_file:
         obj = load_from_json_file(a_file)
