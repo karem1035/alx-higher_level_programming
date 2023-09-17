@@ -14,4 +14,4 @@ def from_json_string(my_str):
         a_dict (python obj): the converted str
     """
     a_dict = json.loads(my_str)
-    return a_dict
+    return a_dictw
