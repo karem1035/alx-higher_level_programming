@@ -74,7 +74,7 @@ class Rectangle(Base):
 
         # Value Validator
         if x < 0:
-            raise ValueError(f"x must be >=  0")
+            raise ValueError(f"x must be >= 0")
 
         self.__x = x
 
@@ -94,6 +94,6 @@ class Rectangle(Base):
 
         # Value Validator
         if y < 0:
-            raise ValueError(f"y must be >=  0")
+            raise ValueError(f"y must be >= 0")
 
         self.__y = y
