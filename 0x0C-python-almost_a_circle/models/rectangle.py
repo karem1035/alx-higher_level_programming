@@ -1,4 +1,4 @@
-#!/bin/bash/python3
+#!/usr/bin/python3
 """Importing the base class"""
 
 from models.base import Base
