@@ -19,7 +19,7 @@ class Rectangle(Base):
 
     # Width getter and setter
     @property
-    def get_width(self):
+    def width(self):
         """Returnning width of the rectangle"""
         return (__width)
 
