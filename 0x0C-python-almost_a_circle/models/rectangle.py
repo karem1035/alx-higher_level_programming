@@ -111,4 +111,4 @@ class Rectangle(Base):
         """The str of the Rectangle"""
 
         return f"[Rectangle] ({self.id}) {self.x}/{self.y}\
-- {self.width}/{self.height}"
+ - {self.width}/{self.height}"
