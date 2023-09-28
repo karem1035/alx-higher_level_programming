@@ -106,3 +106,9 @@ class Rectangle(Base):
         """Display the rectangle with #s"""
         for i in range(self.height):
             print("#" * self.width)
+
+    def __str__(self):
+        """The str of the Rectangle"""
+
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y}\
+- {self.width}/{self.height}"
