@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""A Base Class"""
-
 
 class Base:
-    """The Base Class created
+    """
+    A base class
     """
     __nb_objects = 0
 
@@ -11,9 +10,9 @@ class Base:
         """Init method
 
         Args:
-            id (int): _description_. number of objects created.
+            id: number of inits. Defaults to None.
         """
-        if id is not None:
+        if id:
             self.id = id
         else:
             Base.__nb_objects += 1
