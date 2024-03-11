@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // computes and prints a factorial
-function fact(n) {
+function fact (n) {
   if (n) return n * fact(n - 1);
   else return 1;
 }
