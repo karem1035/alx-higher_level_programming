@@ -18,5 +18,11 @@ if __name__ == "__main__":
 
 	cursor = conn.cursor()
 	cursor.execute("SELECT * FROM states")
-	for i in cursor:
+
+	data = cursor.fetchall()
+	for i in data:
 		print(i)
+
+	cursor.close()
+	conn.close()
+
