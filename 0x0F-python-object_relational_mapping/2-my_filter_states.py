@@ -18,9 +18,9 @@ if __name__ == "__main__":
         )
 
     cursor = conn.cursor()
-    cursor.execute(f"SELECT * FROM states\
-                    WHERE name LIKE '{namearg}'\
-                    ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states\
+                    WHERE name LIKE '{}'\
+                    ORDER BY id ASC".format(namearg))
 
     data = cursor.fetchall()
     for i in data:
