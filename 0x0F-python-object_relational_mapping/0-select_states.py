@@ -4,25 +4,24 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-	username = sys.argv[1]
-	password = sys.argv[2]
-	database = sys.argv[3]
-	
-	conn = MySQLdb.connect(
-		host="localhost",
-		port=3306,
-		user=username,
-		passwd=password,
-		db=database
-		)
+    username = sys.argv[2]
+    password = sys.argv[2]
+    database = sys.argv[3]
 
-	cursor = conn.cursor()
-	cursor.execute("SELECT * FROM states")
+    conn = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=username,
+        passwd=password,
+        db=database
+        )
 
-	data = cursor.fetchall()
-	for i in data:
-		print(i)
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM states")
 
-	cursor.close()
-	conn.close()
+    data = cursor.fetchall()
+    for i in data:
+        print(i)
 
+    cursor.close()
+    conn.close()
