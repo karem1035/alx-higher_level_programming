@@ -26,8 +26,8 @@ if __name__ == "__main__":
     data = cursor.fetchall()
     output = []
     for i in data:
-        output.append(i)
-    print(output)
+        output.append(i[0])
+    print(', '.join(output))
 
     # Cleaning the process
     cursor.close()
