@@ -1,21 +1,33 @@
 #!/usr/bin/python3
-"""Script that prints the first State object from the database
-hbtn_0e_6_usa"""
-import sys
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+"""
+script that lists all State objects from the database
+"""
 from model_state import Base, State
+from sqlalchemy import create_engine, select
+from sqlalchemy.orm import sessionmaker
+from sys import argv
 
-if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format
-                           (sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
+if __name__ == '__main__':
+    # Constructing the connection URL using command-line arguments
+    url = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}"
+
+    # Creating the SQLAlchemy engine with pool pre-ping enabled
+    engine = create_engine(url, pool_pre_ping=True)
+
+    # Creating the tables defined in the models
     Base.metadata.create_all(engine)
+
+    # Creating a session factory bound to the engine
     Session = sessionmaker(bind=engine)
+
+    # Creating a new session
     session = Session()
-    first = session.query(State).order_by(State.id).first()
-    if first:
-        print("{}: {}".format(first.id, first.name))
-    else:
-        print("Nothing")
+
+    # Querying the first State objects
+    result = session.query(State).order_by(State.id.asc()).first()
+
+    # Printing the results
+    print(f"{result.id}: {result.name}")
+
+    # Cleaning the session
     session.close()
