@@ -3,9 +3,9 @@
 """
 This Python script defines a SQLAlchemy mapped class for a State entity.
 """
-import sqlalchemy
 from sqlalchemy import Column, String, Integer
-from sqlalchemy.orm import declarative_base
+from sqlalchemy.ext.declarative import declarative_base
+
 Base = declarative_base()
 
 
@@ -19,5 +19,5 @@ class State(Base):
     """
     __tablename__ = "user_account"
 
-    id = Column(Integer, unique=True, nullable=False, autoincrement=True, primary_key=True)
+    id = Column(Integer, nullable=False, autoincrementi=True, primary_key=True)
     name = Column(String(128), unique=True, nullable=False)
