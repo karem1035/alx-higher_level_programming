@@ -27,7 +27,10 @@ if __name__ == '__main__':
     result = session.query(State).order_by(State.id.asc()).first()
 
     # Printing the results
-    print(f"{result.id}: {result.name}")
+    if result:
+        print(f"{result.id}: {result.name}")
+    else:
+        print("Nothing")
 
     # Cleaning the session
     session.close()
