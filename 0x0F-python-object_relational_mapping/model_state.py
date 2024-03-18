@@ -3,7 +3,7 @@
 """
 This Python script defines a SQLAlchemy mapped class for a State entity.
 """
-
+import sqlalchemy
 from sqlalchemy import Column, String, Integer
 from sqlalchemy.orm import declarative_base
 Base = declarative_base()
