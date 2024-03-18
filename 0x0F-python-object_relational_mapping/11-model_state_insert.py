@@ -1,22 +1,42 @@
 #!/usr/bin/python3
-"""Script that adds the State object “Louisiana” to the
-database hbtn_0e_6_usa"""
-import sys
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-
+"""
+script that lists all State objects from the database
+"""
 from model_state import Base, State
+from sqlalchemy import create_engine, select
+from sqlalchemy.orm import sessionmaker
+from sys import argv
 
-if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format
-                           (sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
+if __name__ == '__main__':
+    # Constructing the connection URL using command-line arguments
+    url = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}"
+
+    # Creating the SQLAlchemy engine with pool pre-ping enabled
+    engine = create_engine(url, pool_pre_ping=True)
+
+    # Creating the tables defined in the models
     Base.metadata.create_all(engine)
+
+    # Creating a session factory bound to the engine
     Session = sessionmaker(bind=engine)
+
+    # Creating a new session
     session = Session()
-    new_state = State(name='Louisiana')
+
+    # Create a new State object with the desired values
+    new_state = State(name="Louisiana")
+
+    # Add the new_state obj to the session
     session.add(new_state)
-    state = session.query(State).filter_by(name='Louisiana').first()
-    print(str(state.id))
+
+    # Selection the imputed state
+    state = session.query(State).filter(State.name == 'Louisiana').first()
+
+    # Printing the state id
+    print(state.id)
+
+    # Commit the transaction to persist the changes to the database
     session.commit()
+
+    # Cleaning the session
     session.close()
