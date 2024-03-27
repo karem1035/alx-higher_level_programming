@@ -1,15 +1,23 @@
 #!/usr/bin/python3
-"""Defines a class State"""
 
+"""
+This Python script defines a SQLAlchemy mapped class for a State entity.
+"""
 
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-
+from sqlalchemy import Column, String, Integer
+from sqlalchemy.orm import declarative_base
 Base = declarative_base()
 
 
 class State(Base):
-    """ Class that defines properties of State"""
-    __tablename__ = 'states'
-    id = Column(Integer, primary_key=True)
+    """"
+    Represesnts a state entity in the database.
+
+    Attributes:
+        id (int): The primary key of the state, auto-incremented.
+        name (str): The name of the state, max length 128 characters.
+    """
+    __tablename__ = "states"
+
+    id = Column(Integer,  nullable=False, autoincrement=True, primary_key=True)
     name = Column(String(128), nullable=False)
