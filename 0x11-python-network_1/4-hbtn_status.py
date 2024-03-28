@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 """ sends a request to the URL and displays the body (decoded in utf-8). """
-import sys
-import urllib.request
+import requests
 
 if __name__ == "__main__":
     url = 'https://alx-intranet.hbtn.io/status'
-    response = urllib.request.urlopen(url)
-    data = response.read().decode('utf-8')
+    response = requests.get(url)
     print("Body response:")
-    print(f"\t- type: {type(data)}")
-    print(f"\t- content: {data}")
+    print(f"\t- type: {type(response.text)}")
+    print(f"\t- content: {response.text}")
