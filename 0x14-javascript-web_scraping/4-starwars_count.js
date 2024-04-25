@@ -2,6 +2,7 @@
 const request = require('request');
 const url = process.argv[2];
 const person = 'https://swapi-api.alx-tools.com/api/people/18/';
+let counter = 0;
 
 request(url, function (error, response, body) {
   if (error) {
@@ -10,7 +11,6 @@ request(url, function (error, response, body) {
   }
   if (response.statusCode === 200) {
     const resultsArray = JSON.parse(body).results;
-    let counter = 0;
     let i;
 
     for (i = 0; i < resultsArray.length; i++) {
