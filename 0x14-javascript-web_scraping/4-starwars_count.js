@@ -9,13 +9,9 @@ request(url, function (error, response, body) {
     console.log(error);
     return;
   }
-  if (response.statusCode === 200) {
-    const resultsArray = JSON.parse(body).results;
-    let i;
-
-    for (i = 0; i < resultsArray.length; i++) {
-      if (resultsArray[i].characters.includes(person)) counter++;
-    }
-    console.log(counter);
-  } else console.log(response.statusCode);
+  const resultsArray = JSON.parse(body).results;
+  for (let i = 0; i < resultsArray.length; i++) {
+    if (resultsArray[i].characters.includes(person)) counter++;
+  }
+  console.log(counter);
 });
